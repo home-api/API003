@@ -1,7 +1,6 @@
-package groupId.http;
+package korobitsin.http;
 
 import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.jsoup.Jsoup;
@@ -10,7 +9,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,14 +18,27 @@ import java.util.ArrayList;
  */
 public class Authenticator {
 
-    public static HttpResponse auth() throws IOException {
+    private static String lowRes;
+    private static String wKey;
+    private static String loginKey;
+
+    public static HttpResponse auth(String login, String password) throws IOException {
         HttpResponse firstResponse = HttpClientWrapper.executeGet(HttpClientWrapper.FIELDS_URL);
         String loginPage = EntityUtils.toString(firstResponse.getEntity());
 
-        String lowRes = "";
-        String wKey = "";
-        String loginKey = "";
+        initializeRequestParams(loginPage);
 
+        return HttpClientWrapper.executePost(
+                HttpClientWrapper.FIELDS_URL,
+                new BasicNameValuePair("w", wKey),
+                new BasicNameValuePair("lowRes", lowRes),
+                new BasicNameValuePair("login", loginKey),
+                new BasicNameValuePair("name", login),
+                new BasicNameValuePair("password", password)
+        );
+    }
+
+    private static void initializeRequestParams(String loginPage) {
         Document document = Jsoup.parse(loginPage);
         Elements formElements = document.getElementsByTag("form");
         for (Element formElement : formElements) {
@@ -45,15 +56,6 @@ public class Authenticator {
                 }
             }
         }
-
-        ArrayList<NameValuePair> params = new ArrayList<NameValuePair>();
-        params.add(new BasicNameValuePair("w", wKey));
-        params.add(new BasicNameValuePair("lowRes", lowRes));
-        params.add(new BasicNameValuePair("login", loginKey));
-        params.add(new BasicNameValuePair("name", "login"));
-        params.add(new BasicNameValuePair("password", "password"));
-
-        return HttpClientWrapper.executePost(HttpClientWrapper.FIELDS_URL, params);
     }
 
 }

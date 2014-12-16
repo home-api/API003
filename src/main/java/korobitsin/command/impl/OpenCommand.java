@@ -1,11 +1,11 @@
-package groupId.command.impl;
+package korobitsin.command.impl;
 
-import groupId.command.Command;
-import groupId.http.HttpClientWrapper;
-import groupId.model.Village;
-import groupId.util.convert.VillageConvertUtil;
-import groupId.util.http.HttpUtil;
-import groupId.util.print.PrintUtil;
+import korobitsin.command.Command;
+import korobitsin.http.HttpClientWrapper;
+import korobitsin.model.Village;
+import korobitsin.util.convert.VillageConvertUtil;
+import korobitsin.util.http.HttpUtil;
+import korobitsin.util.print.PrintUtil;
 import org.apache.http.HttpResponse;
 
 import java.io.IOException;

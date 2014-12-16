@@ -1,4 +1,4 @@
-package groupId.model;
+package korobitsin.model;
 
 /**
  * Created with IntelliJ IDEA.

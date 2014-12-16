@@ -1,7 +1,7 @@
-package groupId.util.convert;
+package korobitsin.util.convert;
 
-import groupId.model.Building;
-import groupId.model.Village;
+import korobitsin.model.Building;
+import korobitsin.model.Village;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;

@@ -1,11 +1,11 @@
-package groupId;
+package korobitsin;
 
-import groupId.command.Command;
-import groupId.http.Authenticator;
-import groupId.model.Village;
-import groupId.util.convert.VillageConvertUtil;
-import groupId.util.http.HttpUtil;
-import groupId.util.print.PrintUtil;
+import korobitsin.command.Command;
+import korobitsin.http.Authenticator;
+import korobitsin.model.Village;
+import korobitsin.util.convert.VillageConvertUtil;
+import korobitsin.util.http.HttpUtil;
+import korobitsin.util.print.PrintUtil;
 import org.apache.http.HttpResponse;
 import org.apache.log4j.Logger;
 
@@ -19,7 +19,13 @@ public class App {
     private static final Scanner CONSOLE = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
-        HttpResponse authResponse = Authenticator.auth();
+        System.out.print("Логинь: ");
+        String login = CONSOLE.next();
+        System.out.print("Пароль: ");
+        String password = CONSOLE.next();;
+
+        HttpResponse authResponse = Authenticator.auth(login, password);
+
         String html = HttpUtil.getHtmlFromResponse(authResponse);
         Village village = VillageConvertUtil.convertFromHtml(html);
 

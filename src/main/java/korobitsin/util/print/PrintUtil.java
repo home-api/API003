@@ -1,12 +1,10 @@
-package groupId.util.print;
+package korobitsin.util.print;
 
-import groupId.model.Building;
-import groupId.model.Village;
+import korobitsin.model.Building;
+import korobitsin.model.Village;
 import org.apache.log4j.Logger;
 
 import java.io.PrintStream;
-import java.io.UnsupportedEncodingException;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 

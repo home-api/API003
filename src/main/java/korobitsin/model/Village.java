@@ -1,4 +1,4 @@
-package groupId.model;
+package korobitsin.model;
 
 import java.util.Date;
 import java.util.List;

@@ -64,7 +64,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>groupId.App</mainClass>
+                            <mainClass>korobitsin.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -76,7 +76,7 @@
                     <archive>
                         <manifest>
                             <!-- Jar file entry point -->
-                            <mainClass>groupId.App</mainClass>
+                            <mainClass>korobitsin.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

@@ -1,11 +1,10 @@
-package groupId.command.impl;
+package korobitsin.command.impl;
 
-import groupId.command.Command;
-import groupId.http.HttpClientWrapper;
-import groupId.model.Village;
-import groupId.util.http.HttpUtil;
+import korobitsin.command.Command;
+import korobitsin.http.HttpClientWrapper;
+import korobitsin.model.Village;
+import korobitsin.util.http.HttpUtil;
 import org.apache.http.HttpResponse;
-import org.apache.http.client.methods.HttpGet;
 import org.jsoup.Jsoup;
 import org.jsoup.select.Elements;
 

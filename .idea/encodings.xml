@@ -2,9 +2,8 @@
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/groupId/util/convert/VillageConvertUtil.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/groupId/util/http/HttpUtil.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/groupId/util/print/PrintUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/korobitsin/util/convert/VillageConvertUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/korobitsin/util/http/HttpUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/korobitsin/util/print/PrintUtil.java" charset="UTF-8" />
   </component>
 </project>
-

@@ -1,9 +1,9 @@
-package groupId.command;
+package korobitsin.command;
 
-import groupId.command.impl.BuildCommand;
-import groupId.command.impl.OpenCommand;
-import groupId.model.Village;
-import groupId.util.print.PrintUtil;
+import korobitsin.command.impl.BuildCommand;
+import korobitsin.command.impl.OpenCommand;
+import korobitsin.model.Village;
+import korobitsin.util.print.PrintUtil;
 
 import java.io.IOException;
 import java.util.HashMap;

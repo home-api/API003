@@ -1,6 +1,6 @@
-package groupId.util.convert;
+package korobitsin.util.convert;
 
-import groupId.model.Building;
+import korobitsin.model.Building;
 import junit.framework.TestCase;
 import org.jsoup.nodes.Document;
 

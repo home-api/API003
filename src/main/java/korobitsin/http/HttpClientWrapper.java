@@ -1,4 +1,4 @@
-package groupId.http;
+package korobitsin.http;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -8,11 +8,11 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import org.apache.http.message.BasicNameValuePair;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -36,6 +36,13 @@ public class HttpClientWrapper {
     public static HttpResponse executeGet(String subUrl) {
         HttpGet getRequest = new HttpGet(BASE_URL + subUrl);
         return execute(getRequest);
+    }
+
+    public static HttpResponse executePost(String subUrl, NameValuePair... params)
+            throws UnsupportedEncodingException {
+        HttpPost postRequest = new HttpPost(BASE_URL + subUrl);
+        postRequest.setEntity(new UrlEncodedFormEntity(Arrays.asList(params)));
+        return execute(postRequest);
     }
 
     public static HttpResponse executePost(String subUrl, List<NameValuePair> params)

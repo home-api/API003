@@ -1,17 +1,10 @@
-package groupId.util.http;
+package korobitsin.util.http;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
-import org.apache.http.client.entity.GzipDecompressingEntity;
 import org.apache.http.util.EntityUtils;
 
-import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.zip.GZIPInputStream;
 
 /**
  * Created with IntelliJ IDEA.
